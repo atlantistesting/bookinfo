@@ -16,12 +16,12 @@ resource "aws_subnet" "private_02" {
   }
 }
 
-resource "aws_subnet" "private_02" {
+resource "aws_subnet" "private_03" {
   vpc_id     = "vpc-0a762c08e9eaf51f7"
   cidr_block = "10.0.2.0/24"
 
   tags = {
-    Name = "private_02"
+    Name = "private_03"
   }
 }
 
