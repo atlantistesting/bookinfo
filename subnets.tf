@@ -21,7 +21,7 @@ resource "aws_subnet" "public_03" {
   cidr_block = "10.0.103.0/24"
 
   tags = {
-    Name = "private_03"
+    Name = "public_03"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_subnet" "private_01" {
   cidr_block = "10.0.1.0/24"
 
   tags = {
-    Name = "public_01"
+    Name = "private_01"
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_subnet" "private_02" {
   cidr_block = "10.0.2.0/24"
 
   tags = {
-    Name = "public_02"
+    Name = "private_02"
   }
 }
 
