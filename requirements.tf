@@ -19,11 +19,6 @@ provider "aws" {
   region = var.region
 }
 
-provider "aws" {
-  alias = "virginia"
-  region = var.region 
-}
-
 /*
 provider "kubernetes" {
   host                   = data.aws_eks_cluster.default.endpoint
