@@ -1,5 +1,5 @@
 resource "aws_subnet" "private_01" {
-  vpc_id     = data.aws_vpc.main
+  vpc_id     = data.aws_vpcs.main
   cidr_block = "10.0.101.0/24"
 
   tags = {
@@ -8,7 +8,7 @@ resource "aws_subnet" "private_01" {
 }
 
 resource "aws_subnet" "private_02" {
-  vpc_id     = data.aws_vpc.main
+  vpc_id     = data.aws_vpcs.main
   cidr_block = "10.0.102.0/24"
 
   tags = {
@@ -17,7 +17,7 @@ resource "aws_subnet" "private_02" {
 }
 
 resource "aws_subnet" "private_03" {
-  vpc_id     = data.aws_vpc.main
+  vpc_id     = data.aws_vpcs.main
   cidr_block = "10.0.103.0/24"
 
   tags = {
@@ -26,7 +26,7 @@ resource "aws_subnet" "private_03" {
 }
 
 resource "aws_subnet" "public_01" {
-  vpc_id     = data.aws_vpc.main
+  vpc_id     = data.aws_vpcs.main
   cidr_block = "10.0.1.0/24"
 
   tags = {
@@ -35,7 +35,7 @@ resource "aws_subnet" "public_01" {
 }
 
 resource "aws_subnet" "public_02" {
-  vpc_id     = data.aws_vpc.main
+  vpc_id     = data.aws_vpcs.main
   cidr_block = "10.0.2.0/24"
 
   tags = {
@@ -44,7 +44,7 @@ resource "aws_subnet" "public_02" {
 }
 
 resource "aws_subnet" "public_03" {
-  vpc_id     = data.aws_vpc.main
+  vpc_id     = data.aws_vpcs.main
   cidr_block = "10.0.3.0/24"
 
   tags = {
