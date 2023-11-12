@@ -16,12 +16,12 @@ resource "aws_subnet" "private_02" {
   }
 }
 
-resource "aws_subnet" "public_03" {
+resource "aws_subnet" "private_03" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.103.0/24"
 
   tags = {
-    Name = "public_03"
+    Name = "privatw_03"
   }
 }
 
