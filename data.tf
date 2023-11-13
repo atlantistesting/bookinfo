@@ -3,3 +3,5 @@ data "aws_vpcs" "main" {
     Name = "bookinfo"
   }
 }
+
+data "aws_caller_identity" "current" {}
