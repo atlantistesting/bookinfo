@@ -19,7 +19,7 @@ module "eks" {
     }
   }
 
-  vpc_id     = module.vpc.vpc_id
+  vpc_id     = aws_vpcs.main.id 
   subnet_ids = module.vpc.public_subnets
 
   # aws-auth configmap
