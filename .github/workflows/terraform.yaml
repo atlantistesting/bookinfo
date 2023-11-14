@@ -48,7 +48,6 @@ jobs:
         TF_ACTION_WORKING_DIR: 'terraform'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        args: '-var="region=ap-northeast-1"' 
-
+        args: -var="region=${{ secrets.AWS_REGION }}"'
         # test
 
