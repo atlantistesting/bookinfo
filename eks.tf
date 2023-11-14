@@ -140,6 +140,8 @@ data "aws_ecrpublic_authorization_token" "token" {
   provider=aws.virginia
 }*/
 
+
+/*
 resource "helm_release" "karpenter" {
   namespace        = "karpenter"
   create_namespace = true
@@ -171,6 +173,7 @@ resource "helm_release" "karpenter" {
     value = "KarpenterNodeInstanceProfile-${local.name}" 
   }
 }
+*/
 
 data "http" "karpenter_crds" {
   url = "https://raw.githubusercontent.com/aws/karpenter/v0.30.0/pkg/apis/crds/karpenter.sh_provisioners.yaml"
