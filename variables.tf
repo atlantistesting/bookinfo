@@ -1,7 +1,7 @@
 variable "region" {
   description = "The region where to provision resources"
   type        = string
-  default     = "ap-southeast-1"
+  default     = "us-east-2"
 }
 
 variable "kubernetes_svc_image_pull_secrets" {
