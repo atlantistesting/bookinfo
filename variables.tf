@@ -4,16 +4,6 @@ variable "region" {
   default     = "ap-southeast-1"
 }
 
-variable "github_pat" {
-  description = "GitHub Personal Access Token"
-  type        = string
-}
-
-variable "github_user" {
-  description = "GitHub User"
-  type        = string
-}
-
 variable "kubernetes_svc_image_pull_secrets" {
   description = "list(string) of kubernetes imagePullSecrets"
   type        = list(string)
