@@ -20,7 +20,7 @@ module "eks" {
   }
 
   vpc_id     = data.aws_vpcs.main 
-  subnet_ids = module.vpc.public_subnets
+  subnet_ids = 
 
   # aws-auth configmap
   # we use external module to manage 
@@ -74,7 +74,7 @@ module "eks_managed_node_group" {
   cluster_name    = var.eks_cluster_name 
   cluster_version = "1.27"
 
-  subnet_ids = module.vpc.public_subnets 
+  subnet_ids = [aws.subnet.private_00, aws_subnet.private_01, aws_subnet.private_02] 
 
   // The following variables are necessary if you decide to use the module outside of the parent EKS module context.
   // Without it, the security groups of the nodes are empty and thus won't join the cluster.
