@@ -15,8 +15,12 @@ terraform {
   }
 }
 
-
 provider "aws" {
   alias = "virginia"
   region = "us-east-2" 
 }
+
+provider "aws" {
+  region = "us-east-2" 
+}
+
