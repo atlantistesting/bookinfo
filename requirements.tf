@@ -18,5 +18,5 @@ terraform {
 
 provider "aws" {
   alias = "virginia"
-  region = "ap-southeast-3" 
+  region = "us-east-2" 
 }
