@@ -25,7 +25,7 @@ resource "aws_subnet" "private_02" {
   }
 }
 
-resource "aws_subnet" "public_01" {
+resource "aws_subnet" "public_00" {
   vpc_id     = "vpc-0a762c08e9eaf51f7"
   cidr_block = "10.0.3.0/24"
 
@@ -34,11 +34,11 @@ resource "aws_subnet" "public_01" {
   }
 }
 
-resource "aws_subnet" "public_02" {
+resource "aws_subnet" "public_01" {
   vpc_id     = "vpc-0a762c08e9eaf51f7"
   cidr_block = "10.0.4.0/24"
 
   tags = {
-    Name = "public_02"
+    Name = "public_01"
   }
 }
