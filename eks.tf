@@ -175,6 +175,7 @@ resource "helm_release" "karpenter" {
 }
 */
 
+/*
 data "http" "karpenter_crds" {
   url = "https://raw.githubusercontent.com/aws/karpenter/v0.30.0/pkg/apis/crds/karpenter.sh_provisioners.yaml"
 }
@@ -214,3 +215,4 @@ resource "kubectl_manifest" "karpenter_provisioner" {
 
   depends_on = [helm_release.karpenter, kubectl_manifest.karpenter_crds]
 }
+*/
