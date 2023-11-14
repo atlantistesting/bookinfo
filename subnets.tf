@@ -42,3 +42,12 @@ resource "aws_subnet" "public_01" {
     Name = "public_01"
   }
 }
+
+resource "aws_subnet" "public_02" {
+  vpc_id     = "vpc-0a762c08e9eaf51f7"
+  cidr_block = "10.0.4.0/24"
+
+  tags = {
+    Name = "public_02"
+  }
+}
