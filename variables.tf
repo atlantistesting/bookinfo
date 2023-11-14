@@ -122,3 +122,7 @@ variable "crossplane_eks_cluster_name" {
   default     = "BOA"
 }
 
+variable "name" {
+  type        = string
+  default     = "bookinfo"
+}
