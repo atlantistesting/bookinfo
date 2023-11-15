@@ -20,7 +20,7 @@ module "eks" {
   }
 
   vpc_id     = "vpc-0eb767eb3b5a0342f"  
-  subnet_ids = [aws_subnet.public_00.id, aws_subnet.public_01.id, aws_subnet.public_02.id] 
+  subnet_ids = ["subnet-0c2abf9b0dcd0a208", "subnet-0bb787697546d3d6b", "subnet-0b5c44019c5955974"] 
 
   # aws-auth configmap
   # we use external module to manage 
