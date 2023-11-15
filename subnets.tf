@@ -18,7 +18,7 @@ resource "aws_subnet" "private_01" {
 
 resource "aws_subnet" "private_02" {
   vpc_id     = "vpc-0eb767eb3b5a0342f"
-  cidr_block = "172.32.16.0/20"
+  cidr_block = "172.31.16.0/20"
 
   tags = {
     Name = "private_02"
