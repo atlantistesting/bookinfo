@@ -74,7 +74,7 @@ module "eks_managed_node_group" {
   cluster_name    = var.eks_cluster_name 
   cluster_version = "1.27"
 
-  subnet_ids = [aws_subnet.private_00, aws_subnet.private_01, aws_subnet.private_02] 
+  subnet_ids = ["subnet-007ba652918addc6a", "subnet-07e6fccdd54c39da4", "subnet-06f629d6468df1edc"] 
 
   // The following variables are necessary if you decide to use the module outside of the parent EKS module context.
   // Without it, the security groups of the nodes are empty and thus won't join the cluster.
