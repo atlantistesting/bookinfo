@@ -1,5 +1,5 @@
 resource "aws_subnet" "private_00" {
-  vpc_id     = "vpc-0eb767eb3b5a0342f"
+  vpc_id     = module.vpc.id
   cidr_block = "172.31.0.0/20"
 
   tags = {
