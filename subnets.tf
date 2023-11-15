@@ -1,6 +1,6 @@
 resource "aws_subnet" "private_00" {
   vpc_id     = module.vpc.vpc_id
-  cidr_block = module.vpc.private_subnets
+  cidr_block = module.vpc.private_subnets.id
 
   tags = {
     Name = "private_00"
