@@ -4,7 +4,6 @@ resource "random_id" "cluster_name" {
 }
 
 resource "digitalocean_kubernetes_cluster" "k8s" {
-  depends_on = [digitalocean_vpc.k8s]
   count      = var.enable_digitalocean ? 1 : 0
   name       = local.name 
   region     = var.do_region
@@ -15,7 +14,6 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
     size       = var.do_k8s_node_type
     node_count = var.do_k8s_nodes
   }
-  vpc_uuid   = digitalocean_vpc.k8s.id
 }
 
 resource "digitalocean_kubernetes_node_pool" "k8s_nodes" {
