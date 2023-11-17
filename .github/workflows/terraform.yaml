@@ -48,6 +48,6 @@ jobs:
         TF_ACTION_WORKING_DIR: 'terraform'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        args: -var="region=${{ secrets.AWS_REGION }}"' -var="region=${{ secrets.GH_PAT }}" -var="argocd_oidc_clint_id=${{secrets.ARGOCD_OIDC_CLIENT_ID}}" -var="argocd_oidc_client_id=${{secrets.ARGOCD_OIDC_CLIENT_ID}}"
+        args: -var="region=${{ secrets.AWS_REGION }}"' -var="region=${{ secrets.GH_PAT }}" -var="argocd_oidc_clint_id=${{secrets.ARGOCD_OIDC_CLIENT_ID}}" -var="argocd_oidc_client_id=${{secrets.ARGOCD_OIDC_CLIENT_ID}}" -var="argocd_oidc_client_secret=${{secrets.ARGOCD_OIDC_CLIENT_SECRET}}"
         # test
 
