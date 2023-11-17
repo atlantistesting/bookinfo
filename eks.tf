@@ -110,7 +110,6 @@ resource "aws_iam_instance_profile" "karpenter" {
   role = module.eks_managed_node_group.iam_role_name
 }
 
-
 module "karpenter_irsa" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-role-for-service-accounts-eks"
   depends_on = [module.kube_auth]

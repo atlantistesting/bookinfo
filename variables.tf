@@ -9,3 +9,8 @@ variable "eks_cluster_name" {
 variable "domain_name" {
   default = "wayofthesys.org"
 }
+
+variable "argocd_oidc_client_id" {
+  description = "ArgoCD OIDC Client ID"
+  type        = string
+}
