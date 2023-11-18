@@ -208,6 +208,4 @@ resource "kubectl_manifest" "karpenter_provisioner" {
         karpenter.sh/discovery: ${local.name}
     ttlSecondsAfterEmpty: 30
   YAML
-
-  depends_on = [helm_release.karpenter, kubectl_manifest.karpenter_crds]
 }
