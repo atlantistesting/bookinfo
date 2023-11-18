@@ -135,6 +135,7 @@ module "karpenter_irsa" {
   }
 }
 
+/*
 resource "helm_release" "karpenter" {
   namespace        = "karpenter"
   create_namespace = true
@@ -170,6 +171,7 @@ resource "helm_release" "karpenter" {
 data "http" "karpenter_crds" {
   url = "https://raw.githubusercontent.com/aws/karpenter/v0.30.0/pkg/apis/crds/karpenter.sh_provisioners.yaml"
 }
+*/
 
 data "kubectl_file_documents" "karpenter_crds" {
   content = data.http.karpenter_crds.response_body
