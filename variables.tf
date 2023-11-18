@@ -13,6 +13,7 @@ variable "domain_name" {
 variable "argocd_oidc_client_id" {
   description = "ArgoCD OIDC Client ID"
   type        = string
+  default     = "614992756863-m0i4l8b7uslg3dhhmfs2lsulu8l33juq.apps.googleusercontent.com"
 }
 
 variable "argocd_oidc_client_secret" {
