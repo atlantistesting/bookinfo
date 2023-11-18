@@ -173,9 +173,10 @@ data "http" "karpenter_crds" {
 }
 */
 
+/*
 data "kubectl_file_documents" "karpenter_crds" {
   content = data.http.karpenter_crds.response_body
-}
+}*/
 
 resource "kubectl_manifest" "karpenter_crds" {
   for_each  = data.kubectl_file_documents.karpenter_crds.manifests
