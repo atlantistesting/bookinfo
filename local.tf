@@ -13,7 +13,7 @@ locals {
       server = {
         config = {
           "admin.enabled" = "true"
-          "url"           = "https://argocd.${var.domain_name[0]}"
+          "url"           = "https://argocd.wayofthesys.org"
           "dex.config" = yamlencode(
             {
               connectors = [
