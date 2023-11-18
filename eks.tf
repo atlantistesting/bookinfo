@@ -135,9 +135,6 @@ module "karpenter_irsa" {
   }
 }
 
-data "aws_ecrpublic_authorization_token" "token" {
-}
-
 resource "helm_release" "karpenter" {
   namespace        = "karpenter"
   create_namespace = true
