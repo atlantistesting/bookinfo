@@ -5,8 +5,8 @@ module "eks" {
   cluster_name    = var.eks_cluster_name
   cluster_version = "1.28"
 
-  create_iam_role = false
-  iam_role_arn = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/admin_role"
+  create_iam_role                 = false
+  iam_role_arn                    = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/admin_role"
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access  = true
 
@@ -26,8 +26,8 @@ module "eks" {
 
   # aws-auth configmap
   # we use external module to manage 
-  manage_aws_auth_configmap = false 
-  create_aws_auth_configmap = false 
+  manage_aws_auth_configmap = false
+  create_aws_auth_configmap = false
 
   node_security_group_tags = {
     "kubernetes.io/cluster/${var.eks_cluster_name}" = null
@@ -73,10 +73,10 @@ module "eks_managed_node_group" {
   source = "terraform-aws-modules/eks/aws//modules/eks-managed-node-group"
 
   name            = var.eks_cluster_name
-  cluster_name    = var.eks_cluster_name 
+  cluster_name    = var.eks_cluster_name
   cluster_version = "1.27"
 
-  subnet_ids = module.vpc.public_subnets 
+  subnet_ids = module.vpc.public_subnets
 
   // The following variables are necessary if you decide to use the module outside of the parent EKS module context.
   // Without it, the security groups of the nodes are empty and thus won't join the cluster.
@@ -90,8 +90,8 @@ module "eks_managed_node_group" {
   instance_types = ["t3.xlarge"]
   capacity_type  = "SPOT"
 
-  create_iam_role = false 
-  iam_role_arn = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/admin_role"
+  create_iam_role = false
+  iam_role_arn    = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/admin_role"
 
   labels = {
     Environment = "test"
@@ -101,9 +101,9 @@ module "eks_managed_node_group" {
 }
 
 resource "aws_eks_addon" "coredns" {
-  depends_on = [module.eks_managed_node_group]
-  cluster_name = var.eks_cluster_name
-  addon_name   = "coredns"
+  depends_on                  = [module.eks_managed_node_group]
+  cluster_name                = var.eks_cluster_name
+  addon_name                  = "coredns"
   resolve_conflicts_on_update = "OVERWRITE"
 }
 
@@ -112,6 +112,7 @@ resource "aws_iam_instance_profile" "karpenter" {
   role = module.eks_managed_node_group.iam_role_name
 }
 
+/*
 module "karpenter_irsa" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-role-for-service-accounts-eks"
 
@@ -135,6 +136,7 @@ module "karpenter_irsa" {
     Terraform   = "true"
   }
 }
+*/
 
 /*
 resource "helm_release" "karpenter" {
