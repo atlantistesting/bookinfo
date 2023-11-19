@@ -186,6 +186,7 @@ resource "kubectl_manifest" "karpenter_crds" {
 }
 */
 
+/*
 resource "kubectl_manifest" "karpenter_provisioner" {
   yaml_body = <<-YAML
   apiVersion: karpenter.sh/v1alpha5
@@ -210,3 +211,4 @@ resource "kubectl_manifest" "karpenter_provisioner" {
     ttlSecondsAfterEmpty: 30
   YAML
 }
+*/
