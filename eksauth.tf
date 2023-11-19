@@ -1,4 +1,5 @@
 module "kube_auth" {
+    depends_on = [module.eks]
     source = "git::https://github.com/autotune/terraform-aws-eks-auth.git?ref=master"
 
     aws_region   = var.region
