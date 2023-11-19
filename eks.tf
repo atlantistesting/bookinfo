@@ -27,7 +27,7 @@ module "eks" {
   # aws-auth configmap
   # we use external module to manage 
   manage_aws_auth_configmap = false 
-  create_aws_auth_configmap = true
+  create_aws_auth_configmap = false 
 
   node_security_group_tags = {
     "kubernetes.io/cluster/${var.eks_cluster_name}" = null
