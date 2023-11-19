@@ -11,7 +11,7 @@ module "vpc" {
   # VERIFY IRL ENVIRONMENT
   map_public_ip_on_launch = true 
   enable_nat_gateway = false 
-  enable_vpn_gateway = true
+  enable_vpn_gateway = false 
   create_igw         = true
 
   tags = {
